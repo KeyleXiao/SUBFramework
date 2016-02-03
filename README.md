@@ -1,4 +1,4 @@
-# SmartUIBuilderFramework
+# SmartUIBuilderFramework(Vitality)
 UNITY3D 基于UGUI的UI解决方案
 
 ##第一版实现 
