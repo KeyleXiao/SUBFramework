@@ -15,11 +15,28 @@
 //   		See the License for the specific language governing permissions and
 //   		limitations under the License.
 //
-namespace Vitality.Framework.Api
+using System;
+using Vitality.Framework.Api;
+
+namespace Vitality.Framework.Impl
 {
-	public interface IUIBuilderControl
+	public class StyleSheetResolveBase:IStyleSheetResolve
 	{
-		T CreateControl<T> (UIBuilderConstraintType model);
+		#region IStyleSheetResolve implementation
+
+		public T SetStyleSheet<T> (T obj, string style)
+		{
+			throw new NotImplementedException ();
+		}
+
+		public object SetStyleSheet (Type t, object obj, string style)
+		{
+			throw new NotImplementedException ();
+		}
+
+		#endregion
+
+
 	}
 }
 

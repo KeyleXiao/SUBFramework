@@ -15,11 +15,44 @@
 //   		See the License for the specific language governing permissions and
 //   		limitations under the License.
 //
-namespace Vitality.Framework.Api
+using System;
+using Vitality.Framework.Api;
+
+namespace Vitality.Framework.Impl
 {
-	public interface IUIBuilderControl
+	public class UIBuilderControlStyleBase:IUIBuilderControlStyle
 	{
-		T CreateControl<T> (UIBuilderConstraintType model);
+		#region IUIBuilderControlStyle implementation
+
+		public virtual void SetStyleResolve ()
+		{
+			
+		}
+
+		public void InitControlStyle (int styleID, string styleSheet)
+		{
+			StyleID = styleID;
+			StyleSheet = styleSheet;
+		}
+
+		public IStyleSheetResolve sr {
+			get;
+			set;
+		}
+
+		public int StyleID {
+			get;
+			set;
+		}
+
+		public string StyleSheet {
+			get;
+			set;
+		}
+
+		#endregion
+
+
 	}
 }
 
