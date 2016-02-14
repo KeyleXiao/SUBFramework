@@ -15,17 +15,51 @@
 //   		See the License for the specific language governing permissions and
 //   		limitations under the License.
 //
-using UnityEngine;
-using System.Collections;
+using System;
 using Vitality.Framework.Api;
 
 namespace Vitality.Framework.Impl
 {
-	public class UIBuilderControl : IUIBuilderControl
+	public class UIBuilderControlBase:IUIBuilderControlStyle
 	{
-		public T CreateControl<T> (UIBuilderConstraintType model)
-		{
-			return default(T);
+
+		public UnityEngine.GameObject Control {
+			get;
+			set;
 		}
+
+
+		#region IUIBuilderControlStyle implementation
+
+		public virtual void SetStyleResolve ()
+		{
+			sr = new StyleSheetResolveBase ();
+		}
+
+		public virtual void InitControlStyle (int styleID, string styleSheet)
+		{
+			StyleID = styleID;
+			StyleSheet = styleSheet;
+		}
+
+		public IStyleSheetResolve sr {
+			get;
+			set;
+		}
+
+		public int StyleID {
+			get;
+			set;
+		}
+
+		public string StyleSheet {
+			get;
+			set;
+		}
+
+		#endregion
+
+
 	}
 }
+

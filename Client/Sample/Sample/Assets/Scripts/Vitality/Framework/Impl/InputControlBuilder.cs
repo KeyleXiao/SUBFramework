@@ -17,42 +17,27 @@
 //
 using System;
 using Vitality.Framework.Api;
+using UnityEngine;
 
 namespace Vitality.Framework.Impl
 {
-	public class UIBuilderControlStyleBase:IUIBuilderControlStyle
+	public class InputControlBuilder:IUIBuilderControl
 	{
-		#region IUIBuilderControlStyle implementation
+		#region IUIBuilderControl implementation
 
-		public virtual void SetStyleResolve ()
+		public T CreateControl<T> (UIBuilderConstraintType model)
 		{
-			sr = new StyleSheetResolveBase ();
+			throw new NotImplementedException ();
 		}
 
-		public virtual void InitControlStyle (int styleID, string styleSheet)
+		public object CreateControl (UIBuilderConstraintType model)
 		{
-			StyleID = styleID;
-			StyleSheet = styleSheet;
-		}
-
-		public IStyleSheetResolve sr {
-			get;
-			set;
-		}
-
-		public int StyleID {
-			get;
-			set;
-		}
-
-		public string StyleSheet {
-			get;
-			set;
+			throw new NotImplementedException ();
 		}
 
 		#endregion
-
-
+		
+		
 	}
 }
 

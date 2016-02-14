@@ -22,7 +22,7 @@ namespace Vitality.Framework.Api
 	/// </summary>
 	public enum UIBuilderConst
 	{
-		INPUT_BOX,
+		INPUT,
 		BUTTON,
 		TOGGLE,
 		SLIDER,
