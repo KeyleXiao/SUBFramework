@@ -24,7 +24,7 @@ namespace Vitality.Framework.Impl
 	{
 		public T CreateControl<T> (UIBuilderConst t, params object[] o)
 		{
-			throw new NotImplementedException ();
+			return default(T);
 		}
 	}
 }

@@ -30,7 +30,8 @@ namespace Vitality.Framework.Api
 		IMAGE,
 		TEXTURE,
 		PANEL,
-		SCROLL
+		SCROLL,
+		TEMPLATE
 	}
 
 }

@@ -26,4 +26,3 @@ namespace Vitality.Framework.Api
 		object SetStyleSheet (Type t, object obj, string style);
 	}
 }
-

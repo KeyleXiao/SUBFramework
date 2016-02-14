@@ -32,4 +32,3 @@ namespace Vitality.Framework.Api
 		string StyleSheet{ get; set; }
 	}
 }
-

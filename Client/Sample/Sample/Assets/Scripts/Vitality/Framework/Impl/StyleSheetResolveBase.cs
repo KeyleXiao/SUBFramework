@@ -24,19 +24,17 @@ namespace Vitality.Framework.Impl
 	{
 		#region IStyleSheetResolve implementation
 
-		public T SetStyleSheet<T> (T obj, string style)
+		public virtual T SetStyleSheet<T> (T obj, string style)
 		{
-			throw new NotImplementedException ();
+			return default(T);
 		}
 
-		public object SetStyleSheet (Type t, object obj, string style)
+		public virtual object SetStyleSheet (Type t, object obj, string style)
 		{
-			throw new NotImplementedException ();
+			return obj;
 		}
 
 		#endregion
-
-
 	}
 }
 

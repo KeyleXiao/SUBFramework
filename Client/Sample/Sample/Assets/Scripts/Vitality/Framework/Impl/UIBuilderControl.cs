@@ -25,7 +25,7 @@ namespace Vitality.Framework.Impl
 	{
 		public T CreateControl<T> (UIBuilderConstraintType model)
 		{
-			throw new System.NotImplementedException ();
+			return default(T);
 		}
 	}
 }
