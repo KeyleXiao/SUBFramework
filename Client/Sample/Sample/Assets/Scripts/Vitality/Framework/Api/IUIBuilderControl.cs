@@ -21,9 +21,9 @@ namespace Vitality.Framework.Api
 {
 	public interface IUIBuilderControl
 	{
-		T CreateControl<T> (UIBuilderConstraintType model);
+		object CreateControl<T> () where T:MonoBehaviour;
 
-		object CreateControl (UIBuilderConstraintType model);
+		object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg);
 	}
 }
 

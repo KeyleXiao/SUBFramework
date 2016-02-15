@@ -17,27 +17,40 @@
 //
 using System;
 using Vitality.Framework.Api;
-using UnityEngine;
 
-namespace Vitality.Framework.Impl
+namespace Vitality.Framework
 {
-	public class InputControlBuilder:IUIBuilderControl
+	[AttributeUsage (AttributeTargets.Field, Inherited = false, AllowMultiple = true)]
+	public sealed class CreatControlAttribute : Attribute
 	{
-		#region IUIBuilderControl implementation
+		readonly UIBuilderConstraintType model;
+		readonly UIBuilderConst buildType;
+		readonly object[] arg;
 
-		public T CreateControl<T> (UIBuilderConstraintType model)
-		{
-			throw new NotImplementedException ();
+		public UIBuilderConstraintType Model {
+			get {
+				return model;
+			}
 		}
 
-		public object CreateControl (UIBuilderConstraintType model)
-		{
-			throw new NotImplementedException ();
+		public UIBuilderConst BuildType {
+			get {
+				return buildType;
+			}
 		}
 
-		#endregion
-		
-		
+		public object[] Arg {
+			get {
+				return arg;
+			}
+		}
+
+		public CreatControlAttribute (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		{
+			this.model = model;
+			this.buildType = buildType;
+			this.arg = arg;
+		}
 	}
 }
 
