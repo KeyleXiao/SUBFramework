@@ -33,7 +33,7 @@ namespace Vitality.Framework.Impl
 		public virtual object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
 		{
 			if (model == UIBuilderConstraintType.DYNAMIC) {
-				return DynamicLoad (model, buildType, arg);
+				return DynamiCreat (model, buildType, arg);
 			}	
 
 			if (model == UIBuilderConstraintType.STATIC) {
@@ -48,18 +48,22 @@ namespace Vitality.Framework.Impl
 			return null;
 		}
 
-		public virtual object  DynamicLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public virtual object  DynamiCreat (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
 		{
+			
 			return null;
 		}
 
+
 		public virtual object StaticLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
 		{
+			
 			return null;
 		}
 
 		public virtual object TemplateLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
 		{
+			
 			return null;
 		}
 

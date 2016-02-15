@@ -25,7 +25,13 @@ namespace Vitality.Framework.Api
 	/// </summary>
 	public enum UIBuilderConstraintType
 	{
+		/// <summary>
+		/// load config file
+		/// </summary>
 		STATIC,
+		/// <summary>
+		/// Create by config and template 
+		/// </summary>
 		DYNAMIC,
 		TEMPLATE
 	}
