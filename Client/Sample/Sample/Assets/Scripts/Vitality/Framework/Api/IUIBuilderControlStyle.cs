@@ -21,13 +21,11 @@ namespace Vitality.Framework.Api
 {
 	public interface IUIBuilderControlStyle
 	{
-		void InitControlStyle (int styleID, string styleSheet);
+		void InitControlStyle (string styleSheet);
 
 		IStyleSheetResolve sr { get; set; }
 
 		void SetStyleResolve ();
-
-		int StyleID { get; set; }
 
 		string StyleSheet{ get; set; }
 	}

@@ -23,7 +23,7 @@ namespace Vitality.Framework.Api
 	{
 		object CreateControl<T> () where T:MonoBehaviour;
 
-		object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg);
+		object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg);
 	}
 }
 

@@ -29,18 +29,12 @@ namespace Vitality.Framework.Impl
 			sr = new StyleSheetResolveBase ();
 		}
 
-		public virtual void InitControlStyle (int styleID, string styleSheet)
+		public virtual void InitControlStyle (string styleSheet)
 		{
-			StyleID = styleID;
 			StyleSheet = styleSheet;
 		}
 
 		public IStyleSheetResolve sr {
-			get;
-			set;
-		}
-
-		public int StyleID {
 			get;
 			set;
 		}
