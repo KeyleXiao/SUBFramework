@@ -30,37 +30,37 @@ namespace Vitality.Framework.Impl
 			throw new NotImplementedException ();
 		}
 
-		public virtual object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public virtual object CreateControl (UIBuilderConstraintType model, UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg)
 		{
 			if (model == UIBuilderConstraintType.DYNAMIC) {
-				return DynamiCreat (model, buildType, arg);
+				return DynamiCreat (buildType, style, arg);
 			}	
 
 			if (model == UIBuilderConstraintType.STATIC) {
-				return StaticLoad (model, buildType, arg);
+				return StaticLoad (buildType, style, arg);
 			}
 
 			if (model == UIBuilderConstraintType.TEMPLATE) {
-				return TemplateLoad (model, buildType, arg);
+				return TemplateLoad (buildType, style, arg);
 			}
 
 			VitalityExpection.GetInstance ().ReportError (VitalityExpectionType.ERROR, "CreateControl has no progress logic");
 			return null;
 		}
 
-		public virtual object  DynamiCreat (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public virtual object  DynamiCreat (UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg)
 		{
 			
 			return null;
 		}
 
-		public virtual object StaticLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public virtual object StaticLoad (UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg)
 		{
 			
 			return null;
 		}
 
-		public virtual object TemplateLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public virtual object TemplateLoad (UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg)
 		{
 			
 			return null;

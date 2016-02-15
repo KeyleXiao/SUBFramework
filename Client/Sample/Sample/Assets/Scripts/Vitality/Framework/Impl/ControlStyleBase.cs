@@ -20,15 +20,8 @@ using Vitality.Framework.Api;
 
 namespace Vitality.Framework.Impl
 {
-	public class UIBuilderControlBase:IUIBuilderControlStyle
+	public class ControlStyleBase:IUIBuilderControlStyle
 	{
-
-		public UnityEngine.GameObject Control {
-			get;
-			set;
-		}
-
-
 		#region IUIBuilderControlStyle implementation
 
 		public virtual void SetStyleResolve ()

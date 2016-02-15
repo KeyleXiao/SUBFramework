@@ -25,6 +25,7 @@ namespace Vitality.Framework
 	{
 		readonly UIBuilderConstraintType model;
 		readonly UIBuilderConst buildType;
+		readonly IUIBuilderControlStyle style;
 		readonly object[] arg;
 
 		public UIBuilderConstraintType Model {
@@ -45,7 +46,7 @@ namespace Vitality.Framework
 			}
 		}
 
-		public CreatControlAttribute (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
+		public CreatControlAttribute (UIBuilderConstraintType model, UIBuilderConst buildType, IUIBuilderControlStyle style, params object[] arg)
 		{
 			this.model = model;
 			this.buildType = buildType;
