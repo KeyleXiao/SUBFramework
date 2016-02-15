@@ -54,7 +54,6 @@ namespace Vitality.Framework.Impl
 			return null;
 		}
 
-
 		public virtual object StaticLoad (UIBuilderConstraintType model, UIBuilderConst buildType, params object[] arg)
 		{
 			
